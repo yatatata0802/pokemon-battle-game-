@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+@layer components {
+  .pokemon-card {
+    @apply bg-white rounded-2xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl;
+  }
+  
+  .pokemon-button {
+    @apply bg-gradient-to-r from-pokemon-red to-pokemon-yellow text-white font-bold py-3 px-6 rounded-full transform transition-all duration-200 hover:scale-105 hover:shadow-lg active:scale-95;
+  }
+  
+  .pokemon-input {
+    @apply w-full p-3 border-2 border-pokemon-blue rounded-lg focus:outline-none focus:border-pokemon-red transition-colors duration-200;
+  }
+}
